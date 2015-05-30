@@ -1,10 +1,10 @@
+require_relative '../db/setup'
 require_relative 'todo'
 
 class TodoList
 
-  def initialize(file_name)
-    @file_name = file_name
-    # You will need to read from your CSV here and assign them to the @todos variable. make sure headers are set to true
+  def initialize
+    @todos = Todo.all
   end
 
   def start
@@ -31,8 +31,18 @@ class TodoList
     end
   end
 
-  def todos
-    @todos
+  def add_todo
+    print "Enter your new todo : "
+    Todo.create(entry: get_input)
+  end
+
+  def mark_todo
+    print "Which todo to mark as done? :"
+    Todo.where(entry: get_input).update_all(completed: true)
+  end
+
+  def view_todos
+
   end
 
   private

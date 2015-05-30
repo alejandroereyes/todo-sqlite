@@ -7,7 +7,7 @@ This program creates a todo list. It will display your todos and show whether th
 
 * Fork this repo
 * Clone this repo
-* Run `bundle install` to install `active_record` on the terminal
+* Run `bundle install` on the terminal to install `active_record` gem
 * Run the `todo_list.rb` file to run the program
 
 

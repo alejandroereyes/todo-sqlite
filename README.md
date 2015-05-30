@@ -2,6 +2,8 @@
 
 This program creates a todo list. It will display your todos and show whether they have been completed or are unfinished. The user can select to add a new todo, mark a todo as completed, delete and todo, or edit a todo.
 
+Your todos are stored in a SQLite database. The ActiveRecord gem was used to generate the the database via migrations and allows for access to read and write to the database.
+
 
 ## Installation
 

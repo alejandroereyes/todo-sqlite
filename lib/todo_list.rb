@@ -3,12 +3,10 @@ require_relative 'todo'
 
 class TodoList
 
-  def initialize
-    @todos = Todo.all
-  end
-
   def start
     loop do
+      @todos = Todo.all
+
       system('clear')
 
       view_todos
@@ -41,6 +39,7 @@ class TodoList
 
   def view_todos
     puts "---- TODO LIST ----"
+    puts
     @todos.each do |item|
       puts "| #{item.id} - #{item.entry} - #{item.completed} |"
     end

@@ -34,14 +34,14 @@ class TodoList
 
   def mark_todo
     print "Which todo to mark as done? :"
-    Todo.where(entry: get_input).update_all(completed: true)
+    Todo.where(id: get_input.to_i).update_all(completed: true)
   end
 
   def view_todos
     puts "---- TODO LIST ----"
     puts
     @todos.each do |item|
-      puts "| #{item.id} - #{item.entry} - #{item.completed} |"
+      puts "| #{item.id})  #{item.entry} - #{item.completed} |"
     end
   end
 

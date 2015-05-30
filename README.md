@@ -10,7 +10,7 @@ Your todos are stored in a SQLite database. The ActiveRecord gem was used to gen
 * Fork this repo
 * Clone this repo
 * Run `bundle install` on the terminal to install `active_record` gem from any directory
-* Run the `todo_list.rb` file to run the program found at todo-sqlite/lib/todo_list.rb
+* Run the `todo_list.rb` file to run the program found at `todo-sqlite/lib/todo_list.rb`
 
 
 ## Credits

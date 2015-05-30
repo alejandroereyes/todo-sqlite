@@ -13,6 +13,7 @@ class TodoList
 
       puts
       puts "What would you like to do?"
+      puts "--------------------------"
       puts "1) Exit 2) Add Todo 3) Mark Todo As Complete"
       puts "        4) Delete Todo 5) Edit Todo"
       print " > "
@@ -41,8 +42,9 @@ class TodoList
   end
 
   def view_todos
-    puts "---- TODO LIST ----"
-    puts
+    puts " ------ TODO LIST -------"
+    puts " | Completed to Date: #{total_finished} |"
+    puts " ------------------------"
     @todos.each do |item|
       puts "#{item.id})  #{item.entry} -- #{item.completed ? "Completed" : "Unfinished"}"
     end
@@ -59,6 +61,10 @@ class TodoList
   def delete_todo
     print "Which todo to delete? : "
     Todo.delete(get_input.to_i)
+  end
+
+  def total_finished
+    Todo.count - Todo.where(completed: false).count
   end
 
   private

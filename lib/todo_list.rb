@@ -11,8 +11,6 @@ class TodoList
     loop do
       system('clear')
 
-      puts "---- TODO.rb ----"
-
       view_todos
 
       puts
@@ -42,7 +40,10 @@ class TodoList
   end
 
   def view_todos
-
+    puts "---- TODO LIST ----"
+    @todos.each do |item|
+      puts "| #{item.id} - #{item.entry} - #{item.completed} |"
+    end
   end
 
   private
@@ -54,3 +55,5 @@ class TodoList
     # File.write(@file_name, @todos.to_csv)
   # end
 end
+
+TodoList.new.start

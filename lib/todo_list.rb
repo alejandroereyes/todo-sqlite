@@ -14,12 +14,14 @@ class TodoList
       puts
       puts "What would you like to do?"
       puts "1) Exit 2) Add Todo 3) Mark Todo As Complete"
+      puts "        4) Delete Todo"
       print " > "
       action = gets.chomp.to_i
       case action
       when 1 then exit
       when 2 then add_todo
       when 3 then mark_todo
+      when 4 then delete_todo
       else
         puts "\a"
         puts "Not a valid choice"
@@ -49,6 +51,11 @@ class TodoList
     print "Which todo to edit? : "
     todo_to_edit = get_input
     puts ""
+  end
+
+  def delete_todo
+    print "Which todo to delete? : "
+    Todo.delete(get_input.to_i)
   end
 
   private

@@ -1,13 +1,16 @@
-This folder structure should be suitable for starting a project that uses a database:
+# Todo List
+-----------
+
+This program was created using Justin Herrick's <a href ="https://github.com/jah2488/todo-csv">todo list program</a> as a starting point.
+
+The model skeleton was used as the <a href="https://github.com/tiy-austin-ror-may2015/model-skeleton">template file</a> layout also taken from Justin Herrick.
+
+## Installation
 
 * Fork this repo
 * Clone this repo
-* Run `bundle install` to install `active_record`
-* `rake generate:migration <NAME>` to create a migration (Don't include the `<` `>` in your name, it should also start with a capital)
-* `rake db:migrate` to run the migration and update the database
-* Create models in lib that subclass `ActiveRecord::Base`
-* ... ?
-* Profit
+* Run `bundle install` to install `active_record` on the terminal
+* Run the `todo_list.rb` file to run the program
 
 
 ## Rundown

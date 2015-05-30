@@ -41,18 +41,20 @@ class TodoList
     puts "---- TODO LIST ----"
     puts
     @todos.each do |item|
-      puts "| #{item.id})  #{item.entry} - #{item.completed} |"
+      puts "#{item.id})  #{item.entry} -- #{item.completed ? "Completed" : "Unfinished"}"
     end
+  end
+
+  def edit_todo
+    print "Which todo to edit? : "
+    todo_to_edit = get_input
+    puts ""
   end
 
   private
   def get_input
     gets.chomp
   end
-
-  # def save!
-    # File.write(@file_name, @todos.to_csv)
-  # end
 end
 
 TodoList.new.start
